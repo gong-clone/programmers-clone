@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import Providers from '../../Application/Providers'
+import Providers from 'Application/Providers'
 import Main from '.'
 
 test('renders <Main /> Compoent - getByText', () => {

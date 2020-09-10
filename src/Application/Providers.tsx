@@ -21,13 +21,14 @@ import { theme } from './Theme'
 firebase.initializeApp(firebaseConfig)
 firebase.auth()
 firebase.storage()
-const firestore = firebase.firestore()
-if (window.location.hostname === 'localhost') {
-  firestore.settings({
-    host: 'localhost:5001',
-    ssl: false,
-  })
-}
+firebase.firestore()
+// const firestore = firebase.firestore()
+// if (window.location.hostname === 'localhost') {
+//   firestore.settings({
+//     host: 'localhost:5001',
+//     ssl: false,
+//   })
+// }
 
 const Providers: FC = ({ children }) => (
   <StrictMode>

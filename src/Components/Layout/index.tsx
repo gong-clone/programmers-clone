@@ -1,4 +1,4 @@
-import styled from '../../Application/Theme'
+import styled from 'Application/Theme'
 
 const Layout = styled.div`
   display: flex;

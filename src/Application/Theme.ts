@@ -8,6 +8,7 @@ export const theme: ThemeType = {
     darkBlue: '#0053f4',
     cyan: '#eeebff',
     lightNavy: '#d8ddff',
+    white: '#ffffff',
   },
 }
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react/types-6-0'
 import styled from '@emotion/styled'
-import A, { NavbarBrand, NavLink, ItemThumb, ItemTitle } from '.'
+import A from '.'
 
 export default {
   title: 'Component/A',
@@ -31,10 +31,7 @@ const AStoryContainer = styled.a`
 export const AComponent: Story = ({ children }) => {
   return (
     <AStoryContainer>
-      <NavbarBrand>{children}</NavbarBrand>
-      <NavLink>{children}</NavLink>
-      <ItemThumb>{children}</ItemThumb>
-      <ItemTitle>{children}</ItemTitle>
+      <A>{children}</A>
     </AStoryContainer>
   )
 }

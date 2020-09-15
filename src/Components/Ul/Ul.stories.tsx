@@ -11,7 +11,7 @@ export default {
       type: {
         required: true,
       },
-      defaultValue: 'Ul Component',
+      defaultValue: ['Ul Component', 'Ul Component2'],
       control: 'text',
     },
     listStyle: {
@@ -25,7 +25,15 @@ export default {
 } as Meta
 
 export const UlComponent: Story = ({ children, listStyle }) => (
-  <Ul listStyle={listStyle}>
-    <Li>{children}</Li>
-  </Ul>
+  <>
+    {(typeof children === 'object' ? children : children.split(',')).map(
+      (item: string) => {
+        return (
+          <Ul listStyle={listStyle} key={item}>
+            <Li>{item}</Li>
+          </Ul>
+        )
+      }
+    )}
+  </>
 )

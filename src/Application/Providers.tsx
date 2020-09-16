@@ -1,9 +1,8 @@
 /** @jsx jsx */
 import { StrictMode, FC } from 'react'
 import { Provider as ReduxProvider } from 'react-redux'
-import { jsx, css, Global } from '@emotion/core'
+import { Global, jsx } from '@emotion/core'
 import { ThemeProvider } from 'emotion-theming'
-import emotionNormalize from 'emotion-normalize'
 
 import firebase from 'firebase/app'
 import 'firebase/auth'
@@ -15,6 +14,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { firebaseConfig, reduxFirebaseConfig } from './firebaseConfig'
 import { store } from './Store'
 
+import globalStyle from './globalStyle'
 import { theme } from './Theme'
 
 // Initialize Firebase
@@ -41,11 +41,7 @@ const Providers: FC = ({ children }) => (
       >
         <BrowserRouter>
           <ThemeProvider theme={theme}>
-            <Global
-              styles={css`
-                ${emotionNormalize}
-              `}
-            />
+            <Global styles={globalStyle} />
             {children}
           </ThemeProvider>
         </BrowserRouter>

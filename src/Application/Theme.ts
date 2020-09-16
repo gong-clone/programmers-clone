@@ -3,6 +3,7 @@ import { ThemeType } from '../Types/theme'
 
 export const theme: ThemeType = {
   color: {
+    primary: '#263747',
     dark: '#0C151C',
     blue: '#0078ff',
     darkBlue: '#0053f4',

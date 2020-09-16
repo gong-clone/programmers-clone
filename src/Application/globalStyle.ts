@@ -1,7 +1,8 @@
-import { css } from '@emotion/core'
+import { css, InterpolationWithTheme } from '@emotion/core'
 import emotionNormalize from 'emotion-normalize'
+import { ThemeType } from 'Types/theme'
 
-const globalStyle = css`
+const globalStyle: InterpolationWithTheme<ThemeType> = (theme) => css`
   ${emotionNormalize}
 
   /* font */
@@ -20,8 +21,8 @@ const globalStyle = css`
       'Noto Color Emoji';
     font-size: 16px;
     font-weight: 400;
-    color: #263747;
-    background-color: white;
+    color: ${theme.color.primary};
+    background-color: ${theme.color.white};
     line-height: 1.4;
     width: 100%;
     margin: 0;

@@ -5,5 +5,6 @@ export interface ThemeType {
     darkBlue: string
     cyan: string
     lightNavy: string
+    white: string
   }
 }

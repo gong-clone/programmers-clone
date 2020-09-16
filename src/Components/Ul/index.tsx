@@ -1,7 +1,7 @@
 import styled from 'Application/Theme'
 
 export interface StyledProps {
-  listStyle?: 'none'
+  listStyle?: string
 }
 
 const Ul = styled.ul<StyledProps>`

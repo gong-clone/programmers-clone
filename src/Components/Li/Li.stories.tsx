@@ -7,6 +7,7 @@ export default {
   component: Li,
   argTypes: {
     children: {
+      description: '리스트 테스트',
       type: {
         required: true,
       },
@@ -14,6 +15,7 @@ export default {
       control: 'text',
     },
     color: {
+      description: '색깔 테스트',
       control: 'color',
       defaultValue: '#5F7F90',
     },

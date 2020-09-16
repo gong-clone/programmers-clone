@@ -8,6 +8,7 @@ export default {
   component: Ul,
   argTypes: {
     children: {
+      description: '유저 리스트 테스트',
       type: {
         required: true,
       },

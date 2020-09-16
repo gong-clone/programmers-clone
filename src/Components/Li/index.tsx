@@ -1,7 +1,7 @@
 import styled from 'Application/Theme'
 
 export interface StyledProps {
-  color?: '5F7F90'
+  color?: string
 }
 
 const Li = styled.li<StyledProps>`

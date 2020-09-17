@@ -25,7 +25,7 @@ const Button = styled.button<StyledProps>`
     if (props.size === 'md') {
       return `
         font-size: 14px;
-        padding: '0.3125rem 0.8125rem';
+        padding: 0.3125rem 0.8125rem;
       `
     }
     return ``

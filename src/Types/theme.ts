@@ -7,5 +7,9 @@ export interface ThemeType {
     cyan: string
     lightNavy: string
     white: string
+    gray: string
+    lightGray: string
+    moreLightGray: string
+    lightDark: string
   }
 }

@@ -40,7 +40,7 @@ const JobList: FC<JobListProps> = ({ jobList }) => {
       <StyledJobSortTagList tagList={tagList} />
       <JobListContent>
         {jobList.map((job: Job) => (
-          <JobItem job={job} key={job.title} />
+          <JobItem job={job} key={job.id} />
         ))}
       </JobListContent>
     </Container>

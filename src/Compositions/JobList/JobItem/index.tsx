@@ -97,10 +97,10 @@ const StyledJobItem = styled.div`
   height: auto;
 
   &:hover {
-    border-color: #bbcafb;
+    border-color: ${(props) => props.theme.color.sky};
 
     & h5 {
-      color: #0078ff;
+      color: ${(props) => props.theme.color.blue};
       text-decoration: underline;
     }
   }

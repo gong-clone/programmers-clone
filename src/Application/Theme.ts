@@ -14,6 +14,7 @@ export const theme: ThemeType = {
     lightGray: '#d7e2eb',
     moreLightGray: '#e9ecf3',
     lightDark: '#44576c',
+    sky: '#bbcafb',
   },
 }
 

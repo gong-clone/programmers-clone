@@ -1,16 +1,22 @@
 import React, { FC } from 'react'
 
 import Container from 'Components/Container'
+import { dummyCompetitionList } from '__fixtures__/Competition'
+import { CompetitionList } from 'Types/competition'
 import SmallHeader from './SmallHeader'
+import ListCompetitionSection from './ListCompetitionSection'
 
-const JobList: FC = () => {
-  // 아직 문자열을 저장하는 곳을 정하지 않았기 때문에 하드코딩함
-  const headerTitle = '채용 프로그램'
-  const buttonText = '더보기'
+export interface CompetitionProps {
+  headerTitle: string
+  buttonText: string
+  competitionList: CompetitionList
+}
 
+const JobList: FC<CompetitionProps> = ({ headerTitle, buttonText }) => {
   return (
     <Container>
       <SmallHeader headerTitle={headerTitle} buttonText={buttonText} />
+      <ListCompetitionSection competitionList={dummyCompetitionList} />
     </Container>
   )
 }

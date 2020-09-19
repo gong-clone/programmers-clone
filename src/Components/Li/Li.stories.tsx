@@ -14,14 +14,7 @@ export default {
       defaultValue: '접수 : 20년 08월 27일 14:00 - 11월 05일 18:00',
       control: 'text',
     },
-    color: {
-      description: '색깔 테스트',
-      control: 'color',
-      defaultValue: '#5F7F90',
-    },
   },
 } as Meta
 
-export const UlComponent: Story = ({ children, color }) => (
-  <Li color={color}>{children}</Li>
-)
+export const UlComponent: Story = ({ children }) => <Li>{children}</Li>

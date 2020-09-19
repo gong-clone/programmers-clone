@@ -1,12 +1,13 @@
 import styled from 'Application/Theme'
 
-export interface StyledProps {
-  listStyle?: string
-}
-
-const Ul = styled.ul<StyledProps>`
-  list-style: ${(props) => props.listStyle || 'none'};
-  font-size: 0.875rem;
+const Ul = styled.ul`
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
 `
 
 export default Ul

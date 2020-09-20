@@ -7,4 +7,4 @@ export default {
   component: SwiperContainer,
 } as Meta
 
-export const ContainerComponent: Story = () => <SwiperContainer />
+export const SwiperContainerComponent: Story = () => <SwiperContainer />

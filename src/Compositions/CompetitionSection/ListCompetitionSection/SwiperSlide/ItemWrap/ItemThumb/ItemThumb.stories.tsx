@@ -8,4 +8,4 @@ export default {
   component: ItemThumb,
 } as Meta
 
-export const ItemWrapComponent: Story = () => <ItemThumb />
+export const ItemThumbComponent: Story = () => <ItemThumb />

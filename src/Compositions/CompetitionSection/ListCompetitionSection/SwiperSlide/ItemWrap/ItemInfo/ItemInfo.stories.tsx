@@ -17,6 +17,6 @@ export default {
 } as Meta
 
 type StoryArgType = CompetitionProps
-export const ItemWrapComponent: Story<StoryArgType> = ({ competition }) => (
+export const ItemInfoComponent: Story<StoryArgType> = ({ competition }) => (
   <ItemInfo competition={competition} />
 )

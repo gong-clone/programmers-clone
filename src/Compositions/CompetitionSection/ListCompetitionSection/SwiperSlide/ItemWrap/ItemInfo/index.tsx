@@ -69,32 +69,32 @@ const ItemInfoContainer: FC<CompetitionProps> = ({ competition }) => {
       </ItemInfoTitle>
       <Period>
         {competition.period.map((period: string) => (
-          <PeriodList>{period}</PeriodList>
+          <PeriodList key={period}>{period}</PeriodList>
         ))}
       </Period>
       <Languages>
         {competition.languages.map((lenguages: string) => {
           switch (lenguages) {
             case 'C++':
-              return <MemoSvgCplusplusIcon />
+              return <MemoSvgCplusplusIcon key={lenguages} />
             case 'C#':
-              return <MemoSvgCsharpIcon />
+              return <MemoSvgCsharpIcon key={lenguages} />
             case 'Java':
-              return <MemoSvgJavaIcon />
+              return <MemoSvgJavaIcon key={lenguages} />
             case 'Kotlin':
-              return <MemoSvgKotilnIcon />
+              return <MemoSvgKotilnIcon key={lenguages} />
             case 'Python3':
-              return <MemoSvgPython3Icon />
+              return <MemoSvgPython3Icon key={lenguages} />
             case 'JS':
-              return <MemoSvgJSIcon />
+              return <MemoSvgJSIcon key={lenguages} />
             case 'Go':
-              return <MemoSvgGoIcon />
+              return <MemoSvgGoIcon key={lenguages} />
             case 'Ruby':
-              return <MemoSvgRubyIcon />
+              return <MemoSvgRubyIcon key={lenguages} />
             case 'MySQL':
-              return <MemoSvgMySQLIcon />
+              return <MemoSvgMySQLIcon key={lenguages} />
             default:
-              return <ToolTip> + 1 </ToolTip>
+              return <ToolTip key={lenguages}> + 1 </ToolTip>
           }
         })}
       </Languages>

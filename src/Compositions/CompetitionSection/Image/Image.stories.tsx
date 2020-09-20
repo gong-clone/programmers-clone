@@ -7,4 +7,4 @@ export default {
   component: Image,
 } as Meta
 
-export const SmallHeaderComponent: Story = () => <Image />
+export const ImageComponent: Story = () => <Image />

@@ -1,3 +1,4 @@
+import React, { FC } from 'react'
 import styled from 'Application/Theme'
 
 const SwiperWrapper = styled.div`
@@ -8,6 +9,13 @@ const SwiperWrapper = styled.div`
   display: flex;
   transition-property: transform;
   box-sizing: content-box;
+  transform: translate3d(0px, 0px, 0px);
+  transition-duration: 300ms;
 `
 
-export default SwiperWrapper
+const SwiperWrapperContainer: FC = ({
+  children,
+}: React.HTMLProps<HTMLDivElement>) => (
+  <SwiperWrapper className="swiper">{children}</SwiperWrapper>
+)
+export default SwiperWrapperContainer

@@ -16,6 +16,6 @@ export default {
 } as Meta
 
 type StoryArgType = CompetitionListProps
-export const SmallHeaderComponent: Story<StoryArgType> = ({
+export const ListCompetitionSectionComponent: Story<StoryArgType> = ({
   competitionList,
 }) => <ListCompetitionSection competitionList={competitionList} />

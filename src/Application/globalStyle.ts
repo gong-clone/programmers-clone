@@ -27,6 +27,7 @@ const globalStyle: InterpolationWithTheme<ThemeType> = (theme) => css`
     width: 100%;
     margin: 0;
     word-break: keep-all;
+    overflow-x: hidden;
   }
 `
 

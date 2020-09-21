@@ -31,7 +31,11 @@ const CompetitionSection: FC<CompetitionProps> = ({
         index={index}
         onChangeHandler={onChangeHandler}
       />
-      <ListCompetitionSection competitionList={dummyCompetitionList} />
+      <ListCompetitionSection
+        index={index}
+        onChangeHandler={onChangeHandler}
+        competitionList={dummyCompetitionList}
+      />
       <SwiperPageNation index={index} onChangeHandler={onChangeHandler} />
     </Container>
   )

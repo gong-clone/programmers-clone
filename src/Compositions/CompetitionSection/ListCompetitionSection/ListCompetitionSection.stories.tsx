@@ -12,10 +12,23 @@ export default {
       defaultValue: dummyCompetitionList,
       control: 'object',
     },
+    index: {
+      description: '인덱스',
+      defaultValue: 0,
+      control: 'number',
+    },
   },
 } as Meta
 
 type StoryArgType = CompetitionListProps
 export const ListCompetitionSectionComponent: Story<StoryArgType> = ({
   competitionList,
-}) => <ListCompetitionSection competitionList={competitionList} />
+  index,
+  onChangeHandler,
+}) => (
+  <ListCompetitionSection
+    index={index}
+    competitionList={competitionList}
+    onChangeHandler={onChangeHandler}
+  />
+)

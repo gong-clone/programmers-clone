@@ -39,11 +39,11 @@ const SmallHeader: FC<SmallHeaderProps> = ({
   index,
 }) => {
   const onClickEvent = (action: string, idx: number) => {
-    const dom = document.querySelector<HTMLElement>('.swiper')
+    const swiperItem = document.querySelector<HTMLElement>('.swiperItem')
     const nowPage = action === 'next' ? idx + 1 : idx - 1
     onChangeHandler(nowPage)
-    if (dom) {
-      dom.style.transform = `translate3d(calc(${nowPage * -100}% - ${
+    if (swiperItem) {
+      swiperItem.style.transform = `translate3d(calc(${nowPage * -100}% - ${
         nowPage * 64
       }px), 0px, 0px)`
     }

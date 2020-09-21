@@ -46,10 +46,10 @@ const SwiperPageNationContainer: FC<SwiperPageNationProps> = ({
   onChangeHandler,
 }) => {
   const onClickEvent = (idx: number) => {
-    const dom = document.querySelector<HTMLElement>('.swiper')
+    const swiperItem = document.querySelector<HTMLElement>('.swiperItem')
     onChangeHandler(idx)
-    if (dom) {
-      dom.style.transform = `translate3d(calc(${idx * -100}% - ${
+    if (swiperItem) {
+      swiperItem.style.transform = `translate3d(calc(${idx * -100}% - ${
         idx * 64
       }px), 0px, 0px)`
     }

@@ -11,10 +11,12 @@ export const theme: ThemeType = {
     lightNavy: '#d8ddff',
     white: '#ffffff',
     gray: '#5f7f90',
+    mildGray: '#f4f4f8',
     lightGray: '#d7e2eb',
     moreLightGray: '#e9ecf3',
     lightDark: '#44576c',
     sky: '#bbcafb',
+    yellow: '#ffeb3b',
   },
 }
 

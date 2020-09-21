@@ -49,4 +49,5 @@ const UserMenu: FC = () => {
   return <UserMenuUl>{userItemList}</UserMenuUl>
 }
 
+export { userItems }
 export default UserMenu

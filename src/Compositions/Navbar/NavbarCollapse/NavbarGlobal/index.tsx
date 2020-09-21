@@ -70,4 +70,5 @@ const NavbarGlobal: FC = () => {
   )
 }
 
+export { jobItems, learnItems }
 export default NavbarGlobal

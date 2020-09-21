@@ -73,28 +73,28 @@ const ItemInfoContainer: FC<CompetitionProps> = ({ competition }) => {
         ))}
       </Period>
       <Languages>
-        {competition.languages.map((lenguages: string) => {
-          switch (lenguages) {
+        {competition.languages.map((language: string) => {
+          switch (language) {
             case 'C++':
-              return <MemoSvgCplusplusIcon key={lenguages} />
+              return <MemoSvgCplusplusIcon key={language} />
             case 'C#':
-              return <MemoSvgCsharpIcon key={lenguages} />
+              return <MemoSvgCsharpIcon key={language} />
             case 'Java':
-              return <MemoSvgJavaIcon key={lenguages} />
+              return <MemoSvgJavaIcon key={language} />
             case 'Kotlin':
-              return <MemoSvgKotilnIcon key={lenguages} />
+              return <MemoSvgKotilnIcon key={language} />
             case 'Python3':
-              return <MemoSvgPython3Icon key={lenguages} />
+              return <MemoSvgPython3Icon key={language} />
             case 'JS':
-              return <MemoSvgJSIcon key={lenguages} />
+              return <MemoSvgJSIcon key={language} />
             case 'Go':
-              return <MemoSvgGoIcon key={lenguages} />
+              return <MemoSvgGoIcon key={language} />
             case 'Ruby':
-              return <MemoSvgRubyIcon key={lenguages} />
+              return <MemoSvgRubyIcon key={language} />
             case 'MySQL':
-              return <MemoSvgMySQLIcon key={lenguages} />
+              return <MemoSvgMySQLIcon key={language} />
             default:
-              return <ToolTip key={lenguages}> + 1 </ToolTip>
+              return <ToolTip key={language}> + 1 </ToolTip>
           }
         })}
       </Languages>

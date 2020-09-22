@@ -22,6 +22,14 @@ export default {
       defaultValue: '더보기',
       control: 'text',
     },
+    index: {
+      description: '인덱스 번호',
+      type: {
+        required: true,
+      },
+      defaultValue: 0,
+      control: 'number',
+    },
   },
 } as Meta
 
@@ -30,4 +38,13 @@ type StoryArgsType = SmallHeaderProps
 export const SmallHeaderComponent: Story<StoryArgsType> = ({
   headerTitle,
   buttonText,
-}) => <SmallHeader headerTitle={headerTitle} buttonText={buttonText} />
+  index,
+  onChangeHandler,
+}) => (
+  <SmallHeader
+    headerTitle={headerTitle}
+    buttonText={buttonText}
+    index={index}
+    onChangeHandler={onChangeHandler}
+  />
+)

@@ -7,19 +7,14 @@ export default {
   component: Li,
   argTypes: {
     children: {
+      description: '리스트 테스트',
       type: {
         required: true,
       },
       defaultValue: '접수 : 20년 08월 27일 14:00 - 11월 05일 18:00',
       control: 'text',
     },
-    color: {
-      control: 'color',
-      defaultValue: '#5F7F90',
-    },
   },
 } as Meta
 
-export const UlComponent: Story = ({ children, color }) => (
-  <Li color={color}>{children}</Li>
-)
+export const UlComponent: Story = ({ children }) => <Li>{children}</Li>

@@ -1,10 +1,10 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react/types-6-0'
-import SmallHeader, { SmallHeaderProps } from '.'
+import CompetitionSection, { CompetitionProps } from '.'
 
 export default {
-  title: 'Compositions/CompetitionSection/SmallHeader',
-  component: SmallHeader,
+  title: 'Compositions/CompetitionSection',
+  component: CompetitionSection,
   argTypes: {
     headerTitle: {
       description: '스몰 헤더 타이틀',
@@ -25,9 +25,16 @@ export default {
   },
 } as Meta
 
-type StoryArgsType = SmallHeaderProps
+type StoryArgsType = CompetitionProps
 
-export const SmallHeaderComponent: Story<StoryArgsType> = ({
+export const CompetitionSectionComposition: Story<StoryArgsType> = ({
   headerTitle,
   buttonText,
-}) => <SmallHeader headerTitle={headerTitle} buttonText={buttonText} />
+  competitionList,
+}) => (
+  <CompetitionSection
+    headerTitle={headerTitle}
+    buttonText={buttonText}
+    competitionList={competitionList}
+  />
+)

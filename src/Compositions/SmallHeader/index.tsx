@@ -22,7 +22,7 @@ export interface SmallHeaderProps {
 const SmallHeader: FC<SmallHeaderProps> = ({ headerTitle, buttonText }) => (
   <StyledSmallHeader>
     <H4>{headerTitle}</H4>
-    <OutlinePrimaryButtonWithLeftMargin>
+    <OutlinePrimaryButtonWithLeftMargin size="md">
       {buttonText}
     </OutlinePrimaryButtonWithLeftMargin>
   </StyledSmallHeader>

@@ -26,4 +26,4 @@ const H4 = styled.h4`
 `
 
 export { H1, H4 }
-export default H1
+export default HStyle

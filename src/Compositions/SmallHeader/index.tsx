@@ -27,4 +27,5 @@ const SmallHeader: FC<SmallHeaderProps> = ({ headerTitle, buttonText }) => (
     </OutlinePrimaryButtonWithLeftMargin>
   </StyledSmallHeader>
 )
+
 export default SmallHeader

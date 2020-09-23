@@ -10,6 +10,9 @@ export interface ThemeType {
     gray: string
     mildGray: string
     lightGray: string
+    veryLightGray: string
+    darkGray: string
+    whiteGray: string
     moreLightGray: string
     lightDark: string
     sky: string

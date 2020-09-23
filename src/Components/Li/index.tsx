@@ -1,12 +1,8 @@
 import styled from 'Application/Theme'
 
-export interface StyledProps {
-  color?: '5F7F90'
-}
-
-const Li = styled.li<StyledProps>`
-  padding-top: 0.25rem;
-  font-size: inherit;
-  color: ${(props) => props.color || '5F7F90'};
+const Li = styled.li`
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: -0.009em;
 `
 export default Li

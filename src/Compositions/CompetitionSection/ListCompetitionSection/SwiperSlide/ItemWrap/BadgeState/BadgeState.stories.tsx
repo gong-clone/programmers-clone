@@ -1,11 +1,11 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react/types-6-0'
-import ItemBadgeState from '.'
+import BadgeState from '.'
 
 export default {
   title:
     'Compositions/CompetitionSection/ListCompetitionSection/SwiperSilde/ItemWrap/ItemBadgeState',
-  component: ItemBadgeState,
+  component: BadgeState,
 } as Meta
 
-export const ItemBadgeStateComponent: Story = () => <ItemBadgeState />
+export const BadgeStateComponent: Story = () => <BadgeState />

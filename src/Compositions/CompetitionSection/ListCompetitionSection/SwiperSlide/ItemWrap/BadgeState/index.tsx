@@ -1,6 +1,6 @@
 import styled from 'Application/Theme'
 
-const ItemBadgeState = styled.div`
+const BadgeState = styled.div`
   display: block;
   &::before {
     position: absolute;
@@ -28,4 +28,4 @@ const ItemBadgeState = styled.div`
     border-right: 0.5625rem solid transparent;
   }
 `
-export default ItemBadgeState
+export default BadgeState

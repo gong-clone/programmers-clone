@@ -16,4 +16,10 @@ export const SwiperSildeContainer = styled(SwiperSilde)`
   width: 50%;
 `
 
+export const BannerSwiperSildeContainer = styled(SwiperSilde)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+`
 export default SwiperSilde

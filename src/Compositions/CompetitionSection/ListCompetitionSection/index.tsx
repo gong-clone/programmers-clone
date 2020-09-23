@@ -11,10 +11,10 @@ import { SwiperSildeContainer } from './SwiperSlide'
 import ItemWrap from './SwiperSlide/ItemWrap'
 import ItemThumb from './SwiperSlide/ItemWrap/ItemThumb'
 import ItemInfo from './SwiperSlide/ItemWrap/ItemInfo'
-import ItemBadgeState from './SwiperSlide/ItemWrap/ItemBadgeState'
-import ItemBadgeLabel from './SwiperSlide/ItemWrap/ItemBadgeState/ItemBadgeLabel'
+import ItemBadgeState from './SwiperSlide/ItemWrap/BadgeState'
+import ItemBadgeLabel from './SwiperSlide/ItemWrap/BadgeState/BadgeLabel'
 
-const StyledSwiperContainer = styled(SwiperContainer)`
+export const StyledSwiperContainer = styled(SwiperContainer)`
   display: static;
   padding: 0.5rem 0 0 0.5rem;
   -webkit-touch-callout: none; /* iOS Safari */

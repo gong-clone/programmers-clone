@@ -1,6 +1,6 @@
 import styled from 'Application/Theme'
 
-const ItemBadgeLabel = styled.div`
+const BadgeLabel = styled.div`
   display: block;
   position: absolute;
   top: 0.5rem;
@@ -15,4 +15,4 @@ const ItemBadgeLabel = styled.div`
   text-align: center;
   line-height: 2.5rem;
 `
-export default ItemBadgeLabel
+export default BadgeLabel

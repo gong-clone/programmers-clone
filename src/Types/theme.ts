@@ -8,6 +8,7 @@ export interface ThemeType {
     lightNavy: string
     white: string
     gray: string
+    mildGray: string
     lightGray: string
     veryLightGray: string
     darkGray: string
@@ -15,5 +16,6 @@ export interface ThemeType {
     moreLightGray: string
     lightDark: string
     sky: string
+    yellow: string
   }
 }

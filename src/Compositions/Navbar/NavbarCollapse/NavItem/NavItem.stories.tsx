@@ -13,15 +13,15 @@ const Template = (args: NavItemProps) => (
   <NavItem key={args.id} desc={args.desc} link={args.link} />
 )
 
-export const NavbarGlobalLeftComponent = Template.bind({})
+export const NavbarGlobalLeftComponent: Story<NavItemProps> = Template.bind({})
 const [jobItemsExample] = jobItems
 NavbarGlobalLeftComponent.args = jobItemsExample
 
-export const NavbarGlobalRightComponent = Template.bind({})
+export const NavbarGlobalRightComponent: Story<NavItemProps> = Template.bind({})
 const [learnItemsExample] = learnItems
 NavbarGlobalRightComponent.args = learnItemsExample
 
-export const UserMenuComponent = Template.bind({})
+export const UserMenuComponent: Story<NavItemProps> = Template.bind({})
 const [userItemsExample] = userItems
 UserMenuComponent.args = userItemsExample
 

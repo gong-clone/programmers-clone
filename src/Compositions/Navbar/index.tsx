@@ -14,7 +14,7 @@ const NavBarDiv = styled.div`
   flex-flow: row nowrap;
   justify-content: flex-start;
   /* .navbar-dark */
-  background-color: #0c151c;
+  background-color: ${(props) => props.theme.color.dark};
 `
 
 const Navbar: FC = () => {

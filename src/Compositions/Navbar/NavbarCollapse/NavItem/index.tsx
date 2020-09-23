@@ -57,7 +57,7 @@ const NavItem: FC<NavItemProps> = ({ link, desc }) => {
 const Divider = styled.li`
   width: 0.0625rem;
   height: 0.75rem;
-  background-color: #44576c;
+  background-color: ${(props) => props.theme.color.lightDark};
   margin: 0.6875rem 0.5rem 0 0.5rem;
 `
 

@@ -19,7 +19,7 @@ const SubTitleHeading4 = styled.h4`
   letter-spacing: -0.009em;
   /* .hero-section .hero-warp .sub-title */
   margin-bottom: 2rem;
-  color: #e9ecf3;
+  color: ${(props) => props.theme.color.moreLightGray};
   font-weight: 400;
 `
 // 하드 코딩

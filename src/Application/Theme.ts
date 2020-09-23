@@ -17,7 +17,7 @@ export const theme: ThemeType = {
     veryLightGray: '#b2c0cc',
     moreLightGray: '#e9ecf3',
     lightDark: '#44576c',
-    sky: '#bbcafb'
+    sky: '#bbcafb',
   },
 }
 

@@ -41,7 +41,7 @@ export default {
 type StoryArgsType = BannerProps
 
 const DeveloperBannerBackground = styled.section`
-  background-color: #f4f4f8;
+  background-color: ${(props) => props.theme.color.mildGray};
   padding: 2rem 0;
 `
 

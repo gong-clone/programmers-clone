@@ -59,9 +59,9 @@ const SwiperPageNationContainer: FC<SwiperPageNationProps> = ({
     <SwiperPageNation>
       {[...Array(dummyCompetitionListLength)].map((n, i) =>
         i === index ? (
-          <NowPage key={Math.random()} onClick={() => onClickEvent(i)} />
+          <NowPage key={Math.random() + n} onClick={() => onClickEvent(i)} />
         ) : (
-          <OtherPage key={Math.random()} onClick={() => onClickEvent(i)} />
+          <OtherPage key={Math.random() + n} onClick={() => onClickEvent(i)} />
         )
       )}
     </SwiperPageNation>

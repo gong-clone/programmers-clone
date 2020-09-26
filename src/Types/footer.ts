@@ -10,5 +10,5 @@ export interface FooterProps {
 }
 
 export interface StoryArgsType {
-  FooterStoryData: Footer
+  footerStoryData: Footer
 }

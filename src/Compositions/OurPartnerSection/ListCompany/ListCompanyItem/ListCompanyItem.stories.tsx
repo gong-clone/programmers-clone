@@ -1,10 +1,10 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react/types-6-0'
+import listCompany from '__fixtures__/listCompany'
 import ListCompanyItem, { ListCompanyItemProps } from '.'
-import listCompany from '../__fixtures__/listCompany'
 
 export default {
-  title: 'Compositions/ListCompany/ListCompanyItem',
+  title: 'Compositions/OurPartnerSection/ListCompany/ListCompanyItem',
   component: ListCompanyItem,
   argTypes: {
     logo: {

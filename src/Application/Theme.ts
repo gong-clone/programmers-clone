@@ -21,6 +21,12 @@ export const theme: ThemeType = {
     sky: '#bbcafb',
     yellow: '#ffeb3b',
     blueGray: '#d7e2eb',
+    orange: '#FF9800',
+    black: '#000000',
+    mildBlack: '#4f6b81',
+    mildGreen: '#4CAF50',
+    darkViolet: '#673AB7',
+    darkRed: '#F44336',
   },
 }
 

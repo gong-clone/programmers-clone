@@ -1,10 +1,10 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react/types-6-0'
 import JobItem, { JobItemProps } from '.'
-import { dummyJobList } from '../__fixtures__/jobList'
+import { dummyJobList } from '../../../__fixtures__/jobList'
 
 export default {
-  title: 'Compositions/JobItem',
+  title: 'Compositions/JobListSection/JobItem',
   component: JobItem,
   argTypes: {
     job: {

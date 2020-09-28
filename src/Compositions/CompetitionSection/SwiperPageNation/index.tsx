@@ -72,9 +72,9 @@ const SwiperPageNationContainer: FC<SwiperPageNationProps> = ({
     <SwiperPageNation>
       {[...Array(dummyCompetitionListLength)].map((n, i) =>
         i === index ? (
-          <NowPage key={Math.random()} onClick={() => onClickEvent(i)} />
+          <NowPage key={Number(new Date())} onClick={() => onClickEvent(i)} />
         ) : (
-          <OtherPage key={Math.random()} onClick={() => onClickEvent(i)} />
+          <OtherPage key={Number(new Date())} onClick={() => onClickEvent(i)} />
         )
       )}
     </SwiperPageNation>
@@ -101,7 +101,10 @@ export const BannerPageNationContainer: FC<SwiperPageNationProps> = ({
     <BannerPageNation>
       {[...Array(dummyBannerListLength)].map((n, i) =>
         i === index ? (
-          <BannerNowPage key={Math.random()} onClick={() => onClickEvent(i)} />
+          <BannerNowPage
+            key={Number(new Date())}
+            onClick={() => onClickEvent(i)}
+          />
         ) : (
           <BannerOtherPage
             key={Math.random()}

@@ -19,10 +19,10 @@ const Image = styled.img`
   max-width: 100%;
 `
 
-const RightContainer: FC<BannerListRightInfo> = ({ image }) => {
+const RightContainer: FC<BannerListRightInfo> = ({ imagePath, imageAlt }) => {
   return (
     <Right>
-      <Image src={image} alt={image} />
+      <Image src={imagePath} alt={imageAlt} />
     </Right>
   )
 }

@@ -15,7 +15,8 @@ export interface Banners {
 export type BannerList = Banners[]
 
 export interface BannerListRightInfo {
-  image: string
+  imagePath: string
+  imageAlt: string
 }
 
 export interface BannerListLeftInfo extends HTMLProps<HTMLDivElement> {

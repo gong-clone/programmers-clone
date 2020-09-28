@@ -1,5 +1,5 @@
-import { BannerList } from "Compositions/BannerSwiper";
 import React from "react";
+import { BannerList } from "Types/bannerSwiper";
 
 export const dummyBannerList: BannerList = [
     {

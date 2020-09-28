@@ -62,7 +62,7 @@ const BannerSwiper: FC = () => {
       if (swiperItem) {
         const movePX = dragStartPX - e.nativeEvent.clientX
         nowPX = movePX
-        if (movePX) {
+        if (nowPX > 0) {
           // 왼쪽으로 이동
           swiperItem.style.transform = `translate3d(${-e.nativeEvent
             .clientX}px, 0px, 0px)`
@@ -120,7 +120,10 @@ const BannerSwiper: FC = () => {
           <BannerSwiperSildeContainer key={banner.id}>
             <BannerWrap>
               <BannerLeftInfo banner={banner} />
-              <BannerRightInfo image={banner.image} />
+              <BannerRightInfo
+                imagePath={banner.image}
+                imageAlt={banner.label}
+              />
               <PrevButton onClick={() => onButtonClick(i - 1)}>
                 &#60;
               </PrevButton>

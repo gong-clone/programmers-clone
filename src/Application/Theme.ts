@@ -11,6 +11,7 @@ export const theme: ThemeType = {
     lightNavy: '#d8ddff',
     white: '#ffffff',
     gray: '#5f7f90',
+    mildGray: '#f4f4f8',
     whiteGray: '#98A8B9',
     darkGray: '#142029',
     lightGray: '#d7e2eb',
@@ -18,6 +19,13 @@ export const theme: ThemeType = {
     moreLightGray: '#e9ecf3',
     lightDark: '#44576c',
     sky: '#bbcafb',
+    yellow: '#ffeb3b',
+    orange: '#FF9800',
+    black: '#000000',
+    mildBlack: '#4f6b81',
+    mildGreen: '#4CAF50',
+    darkViolet: '#673AB7',
+    darkRed: '#F44336',
   },
 }
 

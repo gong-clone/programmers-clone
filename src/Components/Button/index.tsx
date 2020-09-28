@@ -16,7 +16,7 @@ const Button = styled.button<StyledProps>`
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: 0.25rem;
-  padding: '0.4375rem 0.8125rem';
+  padding: 0.4375rem 0.8125rem;
   cursor: pointer;
   transition: color 0.08s ease-in-out, background-color 0.08s ease-in-out,
     border-color 0.08s ease-in-out, box-shadow 0.08s ease-in-out;

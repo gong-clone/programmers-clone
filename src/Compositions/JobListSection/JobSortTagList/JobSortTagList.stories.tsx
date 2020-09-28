@@ -1,7 +1,7 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react/types-6-0'
+import { dummyTagList } from '__fixtures__/jobList'
 import JobSortTagList, { JobSortTagListProps } from '.'
-import { dummyTagList } from '../../../__fixtures__/jobList'
 
 export default {
   title: 'Compositions/JobListSection/JobSortTagList',

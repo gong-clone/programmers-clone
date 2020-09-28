@@ -3,9 +3,9 @@ import styled from '@emotion/styled'
 
 import Container from 'Components/Container'
 import SmallHeader from 'Compositions/SmallHeader'
+import { Job, JobListType } from 'Types/jobList'
 import JobSortTagList from './JobSortTagList'
 import JobItem from './JobItem'
-import { Job, JobListType } from '../../Types/jobList'
 
 const StyledJobListSection = styled.section`
   position: relative;

@@ -1,12 +1,6 @@
 import React, { FC } from 'react'
-import CompetitionSection from 'Compositions/CompetitionSection'
-import { dummyCompetitionList } from '__fixtures__/Competition'
+import Layout from 'Components/Layout'
 
-const Main: FC = () => (
-  <CompetitionSection
-    headerTitle="채용프로그램"
-    buttonText="더보기"
-    competitionList={dummyCompetitionList}
-  />
-)
+const Main: FC = () => <Layout>Hello, Programmers-clone!</Layout>
+
 export default Main

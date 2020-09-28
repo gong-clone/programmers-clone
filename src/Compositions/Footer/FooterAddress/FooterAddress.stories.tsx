@@ -8,7 +8,7 @@ export default {
   title: 'Compositions/Footer/FooterAddres',
   component: FooterAddres,
   argTypes: {
-    FooterStoryData: {
+    footerStoryData: {
       description: 'Footer Header',
       defaultValue: FooterData,
       control: 'object',
@@ -17,5 +17,5 @@ export default {
 } as Meta
 
 export const FooterAddressComposition: Story<StoryArgsType> = ({
-  FooterStoryData,
-}) => <FooterAddres FooterData={FooterStoryData} />
+  footerStoryData,
+}) => <FooterAddres FooterData={footerStoryData} />

@@ -11,8 +11,8 @@ import { SwiperSildeContainer } from './SwiperSlide'
 import ItemWrap from './SwiperSlide/ItemWrap'
 import ItemThumb from './SwiperSlide/ItemWrap/ItemThumb'
 import ItemInfo from './SwiperSlide/ItemWrap/ItemInfo'
-import ItemBadgeLabel from './SwiperSlide/ItemWrap/itemBadgeState/itemBadgeLabel'
-import ItemBadgeState from './SwiperSlide/ItemWrap/itemBadgeState'
+import ItemBadgeLabel from './SwiperSlide/ItemWrap/ItemBadgeState/ItemBadgeLabel'
+import ItemBadgeState from './SwiperSlide/ItemWrap/ItemBadgeState'
 
 export const StyledSwiperContainer = styled(SwiperContainer)`
   display: static;

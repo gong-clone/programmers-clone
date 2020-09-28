@@ -107,7 +107,7 @@ export const BannerPageNationContainer: FC<SwiperPageNationProps> = ({
           />
         ) : (
           <BannerOtherPage
-            key={Math.random()}
+            key={Number(new Date())}
             onClick={() => onClickEvent(i)}
           />
         )

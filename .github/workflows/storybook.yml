@@ -21,3 +21,4 @@ jobs:
         with:
           token: ${{ secrets.GH_TOKEN }}
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          autoAcceptChanges: true

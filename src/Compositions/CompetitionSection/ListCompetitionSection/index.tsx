@@ -11,18 +11,12 @@ import { SwiperSildeContainer } from './SwiperSlide'
 import ItemWrap from './SwiperSlide/ItemWrap'
 import ItemThumb from './SwiperSlide/ItemWrap/ItemThumb'
 import ItemInfo from './SwiperSlide/ItemWrap/ItemInfo'
-import ItemBadgeState from './SwiperSlide/ItemWrap/ItemBadgeState'
 import ItemBadgeLabel from './SwiperSlide/ItemWrap/ItemBadgeState/ItemBadgeLabel'
+import ItemBadgeState from './SwiperSlide/ItemWrap/ItemBadgeState'
 
-const StyledSwiperContainer = styled(SwiperContainer)`
+export const StyledSwiperContainer = styled(SwiperContainer)`
   display: static;
   padding: 0.5rem 0 0 0.5rem;
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently*/
 `
 
 const IngState = styled(ItemBadgeLabel)`
@@ -47,39 +41,70 @@ const ListCompetitionSection: FC<CompetitionListProps> = ({
   const [onDrag, setonDrag] = useState<boolean>(false)
   const [dragStartPX, setDragStartPX] = useState<number>(0)
 
+  const setTransform = (nowPage: number) => {
+    const swiperItem = document.querySelector<HTMLElement>('.swiperItem')
+    if (swiperItem) {
+      swiperItem.style.transform = `translate3d(calc(${nowPage * -100}% - ${
+        nowPage * 64
+      }px), 0px, 0px)`
+    }
+  }
+
   const onDragStart = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     setonDrag(true)
     setDragStartPX(e.nativeEvent.clientX)
   }
 
-  const onDragEnd = () => {
-    setonDrag(false)
-  }
-
+  let nowPX = 0
   const onDragMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     if (onDrag) {
-      const swiper = document.querySelector<HTMLDivElement>('.swiper')
       const swiperItem = document.querySelector<HTMLElement>('.swiperItem')
-
-      if (swiper && swiperItem) {
+      if (swiperItem) {
         const movePX = dragStartPX - e.nativeEvent.clientX
-        if ((movePX > 0 && movePX > 100) || (movePX < 0 && movePX < -100)) {
-          setonDrag(false)
-          let nowPage = index
-          if (index !== dummyCompetitionListLength - 1 && movePX > 100) {
-            nowPage = index + 1
-          } else if (index !== 0 && movePX < -100) {
-            nowPage = index - 1
-          }
-          onChangeHandler(nowPage)
-          swiperItem.style.transform = `translate3d(calc(${nowPage * -100}% - ${
-            nowPage * 64
-          }px), 0px, 0px)`
+        nowPX = movePX
+        if (movePX) {
+          // 왼쪽으로 이동
+          swiperItem.style.transform = `translate3d(${-e.nativeEvent
+            .clientX}px, 0px, 0px)`
         } else {
-          swiperItem.style.transform = `translate3d(calc(${-e.nativeEvent
-            .clientX}px), 0px, 0px)`
+          // 오른쪽으로 이동
+          swiperItem.style.transform = `translate3d(${e.nativeEvent.clientX}px, 0px, 0px)`
         }
       }
+    }
+  }
+
+  const onDragEnd = () => {
+    setonDrag(false)
+    // 왼쪽으로 넘길경우
+    if (nowPX < 0 && nowPX <= -30) {
+      // 첫번재 아이템에서 마지막 아이템으로 이동
+      let nowPage = index - 1
+      if (nowPage === -1) {
+        nowPage = dummyCompetitionListLength - 1
+      }
+      setTransform(nowPage)
+      onChangeHandler(nowPage)
+    }
+
+    // 오른쪽으로 넘길경우
+    if (nowPX > 0 && nowPX >= 30) {
+      // 마지막 아이템에서 첫번째 아이템으로 이동
+      let nowPage = index + 1
+      if (nowPage === dummyCompetitionListLength) {
+        nowPage = 0
+      }
+      setTransform(nowPage)
+      onChangeHandler(nowPage)
+    }
+
+    // 넘긴 거리가 적을 경우 (이전페이지로 초기화)
+    if (
+      (nowPX < 0 && nowPX > -30) ||
+      (nowPX > 0 && nowPX < 30) ||
+      nowPX === 0
+    ) {
+      setTransform(index)
     }
   }
 

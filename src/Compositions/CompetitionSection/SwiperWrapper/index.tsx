@@ -16,6 +16,8 @@ const SwiperWrapper = styled.div`
 const SwiperWrapperContainer: FC = ({
   children,
 }: React.HTMLProps<HTMLDivElement>) => (
-  <SwiperWrapper className="swiperItem">{children}</SwiperWrapper>
+  <SwiperWrapper className="swiperItem bannerSwiperItem">
+    {children}
+  </SwiperWrapper>
 )
 export default SwiperWrapperContainer

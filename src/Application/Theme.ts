@@ -21,6 +21,7 @@ export const theme: ThemeType = {
     sky: '#bbcafb',
     yellow: '#ffeb3b',
     blueGray: '#d7e2eb',
+    grayBlue: '#8ca5af',
     orange: '#FF9800',
     black: '#000000',
     mildBlack: '#4f6b81',

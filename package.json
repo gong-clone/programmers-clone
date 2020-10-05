@@ -46,7 +46,8 @@
     "lint:fix": "eslint --fix -f table ./src/ --ext .ts --ext .tsx",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "emulator": "firebase emulators:start"
+    "emulator": "firebase emulators:start",
+    "chromatic": "npx chromatic"
   },
   "eslintConfig": {
     "extends": "react-app"

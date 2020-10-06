@@ -1,6 +1,7 @@
 import React, { FC, useState } from 'react'
 
 import Container from 'Components/Container'
+import { dummyCompetitionList } from '__fixtures__/Competition'
 import { CompetitionList } from 'Types/competition'
 import SmallHeader from './SmallHeader'
 import ListCompetitionSection from './ListCompetitionSection'
@@ -15,7 +16,6 @@ export interface CompetitionProps {
 const CompetitionSection: FC<CompetitionProps> = ({
   headerTitle,
   buttonText,
-  competitionList,
 }) => {
   const [index, setIndex] = useState<number>(0)
 
@@ -34,7 +34,7 @@ const CompetitionSection: FC<CompetitionProps> = ({
       <ListCompetitionSection
         index={index}
         onChangeHandler={onChangeHandler}
-        competitionList={competitionList}
+        competitionList={dummyCompetitionList}
       />
       <SwiperPageNation index={index} onChangeHandler={onChangeHandler} />
     </Container>

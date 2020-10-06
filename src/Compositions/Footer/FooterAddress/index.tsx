@@ -29,7 +29,7 @@ const FooterAddressContainer: FC<FooterProps> = ({ FooterData }) => {
     <FooterAddress>
       <AddressDescription>{FooterData.Description}</AddressDescription>
       {FooterData.PhoneNumber.map((phoneNumber) => (
-        <AddressPhoneNumber>{phoneNumber}</AddressPhoneNumber>
+        <AddressPhoneNumber key={phoneNumber}>{phoneNumber}</AddressPhoneNumber>
       ))}
     </FooterAddress>
   )

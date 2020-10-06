@@ -12,19 +12,27 @@ const Footer = styled.footer`
   width: 100%;
   max-width: 100%;
 `
+
 const Conatiner = styled.div`
   padding-left: 16px;
   padding-right: 16px;
 `
 
+const FooterWrap = styled.div`
+  margin-top: 5rem !important;
+  height: 21.125rem;
+`
+
 const FooterContainer: FC = () => {
   return (
-    <Footer>
-      <Conatiner>
-        <FooterHeaderContainer FooterData={FooterData} />
-        <FooterAddressContainer FooterData={FooterData} />
-      </Conatiner>
-    </Footer>
+    <FooterWrap>
+      <Footer>
+        <Conatiner>
+          <FooterHeaderContainer FooterData={FooterData} />
+          <FooterAddressContainer FooterData={FooterData} />
+        </Conatiner>
+      </Footer>
+    </FooterWrap>
   )
 }
 

@@ -15,12 +15,12 @@ const MainContainer = styled.main`
 `
 
 const ListCompetittionSection = styled.section`
-  padding: 5rem 0 7rem 0;
+  padding: 5rem 0 3.5rem 0;
   display: block;
 `
 
 const BannerSwiperSection = styled.section`
-  margin: 5rem 0 0 0;
+  margin: 5rem 0;
   display: block;
 `
 
@@ -43,11 +43,12 @@ const Main: FC = () => (
       smallTitle={dummyDeveloperBanner.smallTitle}
       buttonText={dummyDeveloperBanner.buttonText}
     />
-    <OurPartnerSection />
 
     <BannerSwiperSection>
       <BannerSwiper />
     </BannerSwiperSection>
+
+    <OurPartnerSection />
 
     <BannerSection
       backgroundType="dark"

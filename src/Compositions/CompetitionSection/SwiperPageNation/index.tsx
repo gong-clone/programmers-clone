@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 import styled from 'Application/Theme'
 import { dummyCompetitionListLength } from '__fixtures__/Competition'
+import { dummyBannerListLength } from '__fixtures__/BannerSwiper'
 import SwiperPageNationBullet from './SwiperPaginationBullet'
 
 const SwiperPageNation = styled.div`
@@ -11,7 +12,6 @@ const SwiperPageNation = styled.div`
   transition: opacity 0.3s;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
-
   transition-duration: 0.1s;
   transition-property: all;
   transition-timing-function: ease-in-out;
@@ -22,6 +22,10 @@ const SwiperPageNation = styled.div`
   margin-top: 1.5rem;
 `
 
+const BannerPageNation = styled(SwiperPageNation)`
+  bottom: 0.5rem;
+`
+
 const NowPage = styled(SwiperPageNationBullet)`
   cursor: initial;
   background: ${(props) => props.theme.color.blue};
@@ -29,11 +33,19 @@ const NowPage = styled(SwiperPageNationBullet)`
   opacity: 1;
 `
 
+const BannerNowPage = styled(NowPage)`
+  background-color: white;
+`
+
 const OtherPage = styled(SwiperPageNationBullet)`
   cursor: pointer;
   width: 0.625rem;
   background: #000;
   opacity: 0.2;
+`
+
+const BannerOtherPage = styled(OtherPage)`
+  background-color: white;
 `
 
 export interface SwiperPageNationProps {
@@ -59,12 +71,51 @@ const SwiperPageNationContainer: FC<SwiperPageNationProps> = ({
     <SwiperPageNation>
       {[...Array(dummyCompetitionListLength)].map((n, i) =>
         i === index ? (
-          <NowPage key={Math.random()} onClick={() => onClickEvent(i)} />
+          <NowPage
+            key={String(Date.now() + Number(i)) + n}
+            onClick={() => onClickEvent(i)}
+          />
         ) : (
-          <OtherPage key={Math.random()} onClick={() => onClickEvent(i)} />
+          <OtherPage
+            key={String(Date.now() + Number(i)) + n}
+            onClick={() => onClickEvent(i)}
+          />
         )
       )}
     </SwiperPageNation>
+  )
+}
+
+export const BannerPageNationContainer: FC<SwiperPageNationProps> = ({
+  index,
+  onChangeHandler,
+}) => {
+  const onClickEvent = (idx: number) => {
+    const swiperItem = document.querySelectorAll<HTMLElement>('.swiperItem')[1]
+    onChangeHandler(idx)
+    if (swiperItem) {
+      swiperItem.style.transform = `translate3d(calc(${idx * -100}% - ${
+        idx * 32
+      }px), 0px, 0px)`
+    }
+  }
+
+  return (
+    <BannerPageNation>
+      {[...Array(dummyBannerListLength)].map((n, i) =>
+        i === index ? (
+          <BannerNowPage
+            key={String(Date.now() + Number(i)) + n}
+            onClick={() => onClickEvent(i)}
+          />
+        ) : (
+          <BannerOtherPage
+            key={String(Date.now() + Number(i)) + n}
+            onClick={() => onClickEvent(i)}
+          />
+        )
+      )}
+    </BannerPageNation>
   )
 }
 

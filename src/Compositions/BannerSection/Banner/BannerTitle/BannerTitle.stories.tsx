@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react/types-6-0'
 import BannerTitle, { BannerTitleProps } from '.'
 
 export default {
-  title: 'Compositions/BannerTitle',
+  title: 'Compositions/BannerSection/Banner/BannerTitle',
   component: BannerTitle,
   argTypes: {
     imgSrc: {

@@ -4,11 +4,30 @@ import A from 'Components/A'
 import HStyle from 'Components/H'
 import Ul from 'Components/Ul'
 import Li from 'Components/Li'
-import { Job } from '../Types/firebaseSchema'
+import { Job } from 'Types/jobList'
 
-const JobItemContainer = styled(A)`
-  display: block;
+const JobItemContainer = styled.div`
+  transition-duration: 0.08s;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+  transition-delay: initial;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 0.0625rem solid ${(props) => props.theme.color.lightGray};
+  border-radius: 0.25rem;
+  height: auto;
+
+  &:hover {
+    border-color: ${(props) => props.theme.color.sky};
+
+    & h5 {
+      color: ${(props) => props.theme.color.blue};
+      text-decoration: underline;
+    }
+  }
 `
+
+const JobItemLink = styled(A)``
 
 const CompanyWrapContainer = styled.div`
   width: 100%;
@@ -85,34 +104,13 @@ const PositionTagItem = styled(Li)`
   background-color: ${(props) => props.theme.color.moreLightGray};
 `
 
-const StyledJobItem = styled.div`
-  transition-duration: 0.08s;
-  transition-property: all;
-  transition-timing-function: ease-in-out;
-  transition-delay: initial;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  border: 0.0625rem solid ${(props) => props.theme.color.lightGray};
-  border-radius: 0.25rem;
-  height: auto;
-
-  &:hover {
-    border-color: ${(props) => props.theme.color.sky};
-
-    & h5 {
-      color: ${(props) => props.theme.color.blue};
-      text-decoration: underline;
-    }
-  }
-`
-
 export interface JobItemProps {
   job: Job
 }
 
 const JobItem: FC<JobItemProps> = ({ job }) => (
-  <StyledJobItem>
-    <JobItemContainer>
+  <JobItemContainer>
+    <JobItemLink>
       <CompanyWrapContainer>
         <CompanyImage src={job.companyImg} alt={job.name} />
         <JobItemDescription>
@@ -125,8 +123,8 @@ const JobItem: FC<JobItemProps> = ({ job }) => (
           <PositionTagItem key={positionTag}>{positionTag}</PositionTagItem>
         ))}
       </PositionTagList>
-    </JobItemContainer>
-  </StyledJobItem>
+    </JobItemLink>
+  </JobItemContainer>
 )
 
 export default JobItem

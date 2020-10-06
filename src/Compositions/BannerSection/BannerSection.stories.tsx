@@ -1,12 +1,19 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react/types-6-0'
-import styled from 'Application/Theme'
-import Banner, { BannerProps } from '.'
+import BannerSection, { BannerSectionProps } from '.'
 
 export default {
-  title: 'Compositions/Banner',
-  component: Banner,
+  title: 'Compositions/BannerSection',
+  component: BannerSection,
   argTypes: {
+    backgroundType: {
+      description: '배경 타입',
+      defaultValue: 'default',
+      control: {
+        type: 'select',
+        options: ['default', 'dark'],
+      },
+    },
     imgSrc: {
       description: '타이틀 왼쪽 이미지',
       control: 'text',
@@ -38,29 +45,24 @@ export default {
   },
 } as Meta
 
-type StoryArgsType = BannerProps
+type StoryArgsType = BannerSectionProps
 
-const DeveloperBannerBackground = styled.section`
-  background-color: ${(props) => props.theme.color.mildGray};
-  padding: 2rem 0;
-`
-
-export const DeveloperBanner: Story<StoryArgsType> = ({
+export const DeveloperBannerSection: Story<StoryArgsType> = ({
+  backgroundType,
   imgSrc,
   smallTitle,
   title,
   buttonText,
 }) => (
-  <DeveloperBannerBackground>
-    <Banner
-      imgSrc={imgSrc}
-      smallTitle={smallTitle}
-      title={title}
-      buttonText={buttonText}
-    />
-  </DeveloperBannerBackground>
+  <BannerSection
+    backgroundType={backgroundType}
+    imgSrc={imgSrc}
+    smallTitle={smallTitle}
+    title={title}
+    buttonText={buttonText}
+  />
 )
-DeveloperBanner.args = {
+DeveloperBannerSection.args = {
   imgSrc:
     'https://firebasestorage.googleapis.com/v0/b/programmers-clone.appspot.com/o/%EB%A9%94%EC%9D%B8%ED%99%94%EB%A9%B4%2Fdeveloper-banner%2Fimg-write-profile-89ca8fe3e523f733bc478a2d22877953.png?alt=media&token=9b238ed9-46b2-41b3-9cb5-192285742e9c',
   smallTitle: '나에게 꼭 맞는 채용 기회',
@@ -72,37 +74,23 @@ DeveloperBanner.args = {
   buttonText: '포지션 더보기',
 }
 
-const JoinUsBannerBackground = styled.section`
-  margin-bottom: -5rem;
-  padding: 2rem 0;
-  background: linear-gradient(90deg, #0c151c 1.3125rem, transparent 1%) center,
-    linear-gradient(
-        ${(props) => props.theme.color.dark} 1.3125rem,
-        transparent 1%
-      )
-      center,
-    ${(props) => props.theme.color.primary};
-  background-size: 1.5rem 1.5rem;
-  color: ${(props) => props.theme.color.white};
-  position: relative;
-`
-
-export const JoinUsBanner: Story<StoryArgsType> = ({
+export const JoinUsBannerSection: Story<StoryArgsType> = ({
+  backgroundType,
   imgSrc,
   smallTitle,
   title,
   buttonText,
 }) => (
-  <JoinUsBannerBackground>
-    <Banner
-      imgSrc={imgSrc}
-      smallTitle={smallTitle}
-      title={title}
-      buttonText={buttonText}
-    />
-  </JoinUsBannerBackground>
+  <BannerSection
+    backgroundType={backgroundType}
+    imgSrc={imgSrc}
+    smallTitle={smallTitle}
+    title={title}
+    buttonText={buttonText}
+  />
 )
-JoinUsBanner.args = {
+JoinUsBannerSection.args = {
+  backgroundType: 'dark',
   smallTitle: 'JOIN OUR TEAM',
   title:
     '프로그래머스에 합류해 개발자 채용 문화의 혁신을 이끌어나가는 에너지의 주체가 되어보세요!',

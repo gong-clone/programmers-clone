@@ -1,9 +1,14 @@
 import React, { FC } from 'react'
 import styled from 'Application/Theme'
 import CompetitionSection from 'Compositions/CompetitionSection'
-import { dummyCompetitionList as competitionList } from '__fixtures__/Competition'
+import JobListSection from 'Compositions/JobListSection'
+import BannerSection from 'Compositions/BannerSection'
+import OurPartnerSection from 'Compositions/OurPartnerSection'
 import BannerSwiper from 'Compositions/BannerSwiper'
 import FooterContainer from 'Compositions/Footer'
+import { dummyCompetitionList as competitionList } from '__fixtures__/Competition'
+import { dummyDeveloperBanner, dummyJoinUsBanner } from '__fixtures__/banner'
+import { dummyJobList } from '__fixtures__/jobList'
 
 const MainContainer = styled.main`
   min-height: calc(100vh - 3.125rem - 21.125rem - 5rem);
@@ -19,6 +24,10 @@ const BannerSwiperSection = styled.section`
   display: block;
 `
 
+const MainContainer = styled.main`
+  min-height: calc(100vh - 3.125rem - 21.125rem - 5rem);
+`
+
 const Main: FC = () => (
   <MainContainer>
     <ListCompetittionSection>
@@ -28,10 +37,30 @@ const Main: FC = () => (
         competitionList={competitionList}
       />
     </ListCompetittionSection>
+    
+    <JobListSection jobList={dummyJobList} />
+    
+    <BannerSection
+      backgroundType="default"
+      imgSrc={dummyDeveloperBanner.imgSrc}
+      title={dummyDeveloperBanner.title}
+      smallTitle={dummyDeveloperBanner.smallTitle}
+      buttonText={dummyDeveloperBanner.buttonText}
+    />
+    <OurPartnerSection />
+    
     <BannerSwiperSection>
       <BannerSwiper />
     </BannerSwiperSection>
-    <FooterContainer />
+
+    <BannerSection
+      backgroundType="dark"
+      title={dummyJoinUsBanner.title}
+      smallTitle={dummyJoinUsBanner.smallTitle}
+      buttonText={dummyJoinUsBanner.buttonText}
+    />
+    
+    <FooterContainer />    
   </MainContainer>
 )
 export default Main

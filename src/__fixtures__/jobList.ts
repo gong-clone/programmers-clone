@@ -1,4 +1,4 @@
-import { JobListType } from '../Types/firebaseSchema'
+import { JobListType } from '../Types/jobList'
 
 export const dummyTagList = [
   ['iOS'],

@@ -24,10 +24,6 @@ const BannerSwiperSection = styled.section`
   display: block;
 `
 
-const MainContainer = styled.main`
-  min-height: calc(100vh - 3.125rem - 21.125rem - 5rem);
-`
-
 const Main: FC = () => (
   <MainContainer>
     <ListCompetittionSection>
@@ -37,9 +33,9 @@ const Main: FC = () => (
         competitionList={competitionList}
       />
     </ListCompetittionSection>
-    
+
     <JobListSection jobList={dummyJobList} />
-    
+
     <BannerSection
       backgroundType="default"
       imgSrc={dummyDeveloperBanner.imgSrc}
@@ -48,7 +44,7 @@ const Main: FC = () => (
       buttonText={dummyDeveloperBanner.buttonText}
     />
     <OurPartnerSection />
-    
+
     <BannerSwiperSection>
       <BannerSwiper />
     </BannerSwiperSection>
@@ -59,8 +55,8 @@ const Main: FC = () => (
       smallTitle={dummyJoinUsBanner.smallTitle}
       buttonText={dummyJoinUsBanner.buttonText}
     />
-    
-    <FooterContainer />    
+
+    <FooterContainer />
   </MainContainer>
 )
 export default Main

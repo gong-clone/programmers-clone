@@ -49,7 +49,7 @@ const FooterHeaderContainer: FC<FooterProps> = ({ FooterData }) => {
       <H6>{FooterData.Title}</H6>
       <Navbar>
         {FooterData.Navbar.map((navbar) => (
-          <NavbarList>{navbar}</NavbarList>
+          <NavbarList key={navbar}>{navbar}</NavbarList>
         ))}
       </Navbar>
     </FooterHeader>

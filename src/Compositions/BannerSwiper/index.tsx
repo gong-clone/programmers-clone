@@ -24,7 +24,7 @@ const BannerSwiper: FC = () => {
   }
 
   const setTransform = (nowPage: number) => {
-    const swiperItem = document.querySelector<HTMLElement>('.bannerSwiperItem')
+    const swiperItem = document.querySelectorAll<HTMLElement>('.swiperItem')[1]
     if (swiperItem) {
       swiperItem.style.transform = `translate3d(calc(${nowPage * -100}% - ${
         nowPage * 32
@@ -56,9 +56,9 @@ const BannerSwiper: FC = () => {
   let nowPX = 0
   const onDragMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     if (onDrag) {
-      const swiperItem = document.querySelector<HTMLElement>(
-        '.bannerSwiperItem'
-      )
+      const swiperItem = document.querySelectorAll<HTMLElement>(
+        '.swiperItem'
+      )[1]
       if (swiperItem) {
         const movePX = dragStartPX - e.nativeEvent.clientX
         nowPX = movePX
@@ -110,7 +110,6 @@ const BannerSwiper: FC = () => {
 
   return (
     <StyledSwiperContainer
-      className="swiper"
       onMouseDown={onDragStart}
       onMouseUp={onDragEnd}
       onMouseMove={onDragMove}

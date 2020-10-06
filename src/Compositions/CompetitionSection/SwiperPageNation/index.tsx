@@ -92,12 +92,10 @@ export const BannerPageNationContainer: FC<SwiperPageNationProps> = ({
   onChangeHandler,
 }) => {
   const onClickEvent = (idx: number) => {
-    const bannerSwiperItem = document.querySelector<HTMLElement>(
-      '.bannerSwiperItem'
-    )
+    const swiperItem = document.querySelectorAll<HTMLElement>('.swiperItem')[1]
     onChangeHandler(idx)
-    if (bannerSwiperItem) {
-      bannerSwiperItem.style.transform = `translate3d(calc(${idx * -100}% - ${
+    if (swiperItem) {
+      swiperItem.style.transform = `translate3d(calc(${idx * -100}% - ${
         idx * 32
       }px), 0px, 0px)`
     }

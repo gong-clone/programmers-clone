@@ -1,10 +1,10 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react/types-6-0'
+import { dummyTagList } from '__fixtures__/jobList'
 import JobSortTagList, { JobSortTagListProps } from '.'
-import { dummyTagList } from '../__fixtures__/jobList'
 
 export default {
-  title: 'Compositions/JobSortTagList',
+  title: 'Compositions/JobListSection/JobSortTagList',
   component: JobSortTagList,
   argTypes: {
     tagList: {
@@ -17,6 +17,6 @@ export default {
 
 type StoryArgsType = JobSortTagListProps
 
-export const JobSortTagListComponent: Story<StoryArgsType> = ({ tagList }) => (
-  <JobSortTagList tagList={tagList} />
-)
+export const JobSortTagListComposition: Story<StoryArgsType> = ({
+  tagList,
+}) => <JobSortTagList tagList={tagList} />

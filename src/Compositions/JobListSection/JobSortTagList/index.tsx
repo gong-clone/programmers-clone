@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import Ul from 'Components/Ul'
 import Li from 'Components/Li'
 import { LightPrimaryButton } from 'Components/Button'
-import { TagList } from '../Types/firebaseSchema'
+import { TagList } from 'Types/jobList'
 
 const StyledJobSortTagList = styled(Ul)`
   & > * {

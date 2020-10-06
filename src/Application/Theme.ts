@@ -20,6 +20,7 @@ export const theme: ThemeType = {
     lightDark: '#44576c',
     sky: '#bbcafb',
     yellow: '#ffeb3b',
+    blueGray: '#d7e2eb',
     grayBlue: '#8ca5af',
     orange: '#FF9800',
     black: '#000000',

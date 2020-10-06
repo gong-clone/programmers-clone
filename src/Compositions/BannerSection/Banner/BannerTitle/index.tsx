@@ -63,7 +63,7 @@ export interface BannerTitleProps {
   title: ReactNode
 }
 
-const Banner: FC<BannerTitleProps> = ({ imgSrc, smallTitle, title }) => (
+const BannerTitle: FC<BannerTitleProps> = ({ imgSrc, smallTitle, title }) => (
   <TitleWrap existImg={!!imgSrc}>
     {imgSrc ? (
       <>
@@ -80,4 +80,4 @@ const Banner: FC<BannerTitleProps> = ({ imgSrc, smallTitle, title }) => (
   </TitleWrap>
 )
 
-export default Banner
+export default BannerTitle

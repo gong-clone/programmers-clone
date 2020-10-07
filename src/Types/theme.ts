@@ -17,6 +17,8 @@ export interface ThemeType {
     lightDark: string
     sky: string
     yellow: string
+    blueGray: string
+    grayBlue: string
     orange: string
     black: string
     mildBlack: string

@@ -11,7 +11,7 @@ const OurFeatureSection = styled.section`
 const Container = styled.div`
   /* .container */
   width: 100%;
-  max-width: 100%;
+  max-width: 1200px !important;
   margin-right: auto;
   margin-left: auto;
   padding-left: 16px;

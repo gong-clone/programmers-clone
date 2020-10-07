@@ -6,11 +6,7 @@ import Li from 'Components/Li'
 import { FooterProps } from 'Types/footer'
 
 const FooterHeader = styled.div`
-  width: 100%;
-  max-width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 1200px !important;
+  width: auto;
 `
 
 const H6 = styled.h6`

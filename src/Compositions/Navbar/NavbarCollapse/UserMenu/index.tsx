@@ -38,7 +38,7 @@ const userItems: Array<NavItemProps> = [
   {
     id: 'user-menu-item3',
     link: 'https://business.programmers.co.kr/',
-    desc: '기업회원',
+    desc: '기업 회원',
   },
 ]
 

@@ -20,7 +20,7 @@ const SubTitleHeading4 = styled.h4`
   /* .hero-section .hero-warp .sub-title */
   margin-bottom: 2rem;
   color: ${(props) => props.theme.color.moreLightGray};
-  font-weight: 400;
+  font-weight: 300;
 `
 // 하드 코딩
 const subTitleStr1 = '이력서보다, 당신의 코드가 우선시되는'

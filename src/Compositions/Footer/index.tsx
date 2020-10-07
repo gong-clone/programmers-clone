@@ -14,8 +14,11 @@ const Footer = styled.footer`
 `
 
 const Conatiner = styled.div`
+  margin-right: auto;
+  margin-left: auto;
   padding-left: 16px;
   padding-right: 16px;
+  max-width: 1200px !important;
 `
 
 const FooterWrap = styled.div`

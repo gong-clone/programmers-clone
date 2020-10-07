@@ -30,7 +30,7 @@ const jobItems: Array<NavItemProps> = [
   {
     id: 'nav-job-item1',
     link: '/skill_checks',
-    desc: '스킬체크',
+    desc: '실력 체크',
   },
   {
     id: 'nav-job-item2',

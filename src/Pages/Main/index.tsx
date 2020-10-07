@@ -1,8 +1,11 @@
 import React, { FC } from 'react'
 import styled from 'Application/Theme'
+import Navbar from 'Compositions/Navbar'
+import HeroSection from 'Compositions/HeroSection'
 import CompetitionSection from 'Compositions/CompetitionSection'
 import JobListSection from 'Compositions/JobListSection'
 import BannerSection from 'Compositions/BannerSection'
+import OurFeature from 'Compositions/OurFeature'
 import OurPartnerSection from 'Compositions/OurPartnerSection'
 import BannerSwiper from 'Compositions/BannerSwiper'
 import FooterContainer from 'Compositions/Footer'
@@ -26,6 +29,8 @@ const BannerSwiperSection = styled.section`
 
 const Main: FC = () => (
   <MainContainer>
+    <Navbar />
+    <HeroSection />
     <ListCompetittionSection>
       <CompetitionSection
         headerTitle="채용프로그램"
@@ -33,9 +38,7 @@ const Main: FC = () => (
         competitionList={competitionList}
       />
     </ListCompetittionSection>
-
     <JobListSection jobList={dummyJobList} />
-
     <BannerSection
       backgroundType="default"
       imgSrc={dummyDeveloperBanner.imgSrc}
@@ -43,20 +46,17 @@ const Main: FC = () => (
       smallTitle={dummyDeveloperBanner.smallTitle}
       buttonText={dummyDeveloperBanner.buttonText}
     />
-
     <BannerSwiperSection>
       <BannerSwiper />
     </BannerSwiperSection>
-
+    <OurFeature />
     <OurPartnerSection />
-
     <BannerSection
       backgroundType="dark"
       title={dummyJoinUsBanner.title}
       smallTitle={dummyJoinUsBanner.smallTitle}
       buttonText={dummyJoinUsBanner.buttonText}
     />
-
     <FooterContainer />
   </MainContainer>
 )

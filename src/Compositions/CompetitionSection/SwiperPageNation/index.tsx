@@ -12,7 +12,6 @@ const SwiperPageNation = styled.div`
   transition: opacity 0.3s;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
-
   transition-duration: 0.1s;
   transition-property: all;
   transition-timing-function: ease-in-out;

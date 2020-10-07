@@ -60,4 +60,5 @@ const Main: FC = () => (
     <FooterContainer />
   </MainContainer>
 )
+
 export default Main

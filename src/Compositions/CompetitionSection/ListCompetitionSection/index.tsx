@@ -17,6 +17,7 @@ import ItemBadgeState from './SwiperSlide/ItemWrap/ItemBadgeState'
 export const StyledSwiperContainer = styled(SwiperContainer)`
   display: static;
   padding: 0.5rem 0 0 0.5rem;
+  max-width: 1200px !important;
 `
 
 const IngState = styled(ItemBadgeLabel)`

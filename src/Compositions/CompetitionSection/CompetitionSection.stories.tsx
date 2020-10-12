@@ -1,5 +1,6 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react/types-6-0'
+import { dummyCompetitionList } from '__fixtures__/Competition'
 import CompetitionSection, { CompetitionProps } from '.'
 
 export default {
@@ -21,6 +22,14 @@ export default {
       },
       defaultValue: '더보기',
       control: 'text',
+    },
+    competitionList: {
+      description: '컴패티션 리스트',
+      type: {
+        required: true,
+      },
+      defaultValue: dummyCompetitionList,
+      control: 'array',
     },
   },
 } as Meta

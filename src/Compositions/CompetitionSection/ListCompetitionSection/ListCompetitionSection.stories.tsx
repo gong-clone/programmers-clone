@@ -10,7 +10,7 @@ export default {
     competitionList: {
       description: '컴페티션 리스트',
       defaultValue: dummyCompetitionList,
-      control: 'object',
+      control: 'array',
     },
     index: {
       description: '인덱스',

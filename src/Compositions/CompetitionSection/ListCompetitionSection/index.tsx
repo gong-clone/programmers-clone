@@ -117,27 +117,28 @@ const ListCompetitionSection: FC<CompetitionListProps> = ({
       onMouseMove={onDragMove}
     >
       <SwiperWrapperContainer>
-        {competitionList.map((competition: Competition) => {
-          return (
-            <SwiperSildeContainer key={competition.id}>
-              <ItemWrap>
-                <ItemBadgeState>
-                  {competition.challengeState === '진행중' ? (
-                    <IngState>{competition.challengeState}</IngState>
-                  ) : (
-                    <EndState>{competition.challengeState}</EndState>
-                  )}
-                </ItemBadgeState>
-                <ItemThumb>
-                  <ImgCompetitionContainer
-                    imgPath={competition.thunbnailImage}
-                  />
-                </ItemThumb>
-                <ItemInfo competition={competition} />
-              </ItemWrap>
-            </SwiperSildeContainer>
-          )
-        })}
+        {competitionList &&
+          competitionList.map((competition: Competition) => {
+            return (
+              <SwiperSildeContainer key={competition.id}>
+                <ItemWrap>
+                  <ItemBadgeState>
+                    {competition.challengeState === '진행중' ? (
+                      <IngState>{competition.challengeState}</IngState>
+                    ) : (
+                      <EndState>{competition.challengeState}</EndState>
+                    )}
+                  </ItemBadgeState>
+                  <ItemThumb>
+                    <ImgCompetitionContainer
+                      imgPath={competition.thunbnailImage}
+                    />
+                  </ItemThumb>
+                  <ItemInfo competition={competition} />
+                </ItemWrap>
+              </SwiperSildeContainer>
+            )
+          })}
       </SwiperWrapperContainer>
     </StyledSwiperContainer>
   )

@@ -39,7 +39,7 @@ const Providers: FC = ({ children }) => (
         dispatch={store.dispatch}
         createFirestoreInstance={createFirestoreInstance}
       >
-        <BrowserRouter>
+        <BrowserRouter basename={`${process.env.PUBLIC_URL}/`}>
           <ThemeProvider theme={theme}>
             <Global styles={globalStyle} />
             {children}

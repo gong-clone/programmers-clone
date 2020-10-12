@@ -1,8 +1,16 @@
 {
-  "name": "programmers-clone",
-  "version": "0.1.0",
-  "private": true,
-  "license": "MIT",
+  "browserslist": {
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ],
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ]
+  },
   "dependencies": {
     "@emotion/core": "^10.0.35",
     "@emotion/styled": "^10.0.27",
@@ -36,47 +44,6 @@
     "redux-firestore": "^0.13.0",
     "typescript": "^4.0.2"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "clean": "rimraf build",
-    "lint": "eslint -f table ./src/ --ext .ts --ext .tsx",
-    "lint:fix": "eslint --fix -f table ./src/ --ext .ts --ext .tsx",
-    "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public",
-    "emulator": "firebase emulators:start",
-    "chromatic": "npx chromatic"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{ts,tsx}": "yarn lint:fix"
-  },
-  "jest": {
-    "snapshotSerializers": [
-      "jest-emotion"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@storybook/addon-actions": "^6.0.21",
@@ -98,7 +65,44 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^4.1.0",
+    "gh-pages": "^3.1.0",
     "prettier": "^2.1.1",
     "react-is": "^16.13.1"
-  }
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "homepage": "https://gong-clone.github.io/programmers-clone",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "jest-emotion"
+    ]
+  },
+  "license": "MIT",
+  "lint-staged": {
+    "*.{ts,tsx}": "yarn lint:fix"
+  },
+  "name": "programmers-clone",
+  "private": true,
+  "scripts": {
+    "build": "react-scripts build",
+    "build-storybook": "build-storybook -s public",
+    "chromatic": "npx chromatic",
+    "clean": "rimraf build",
+    "eject": "react-scripts eject",
+    "emulator": "firebase emulators:start",
+    "lint": "eslint -f table ./src/ --ext .ts --ext .tsx",
+    "lint:fix": "eslint --fix -f table ./src/ --ext .ts --ext .tsx",
+    "start": "react-scripts start",
+    "storybook": "start-storybook -p 6006 -s public",
+    "test": "react-scripts test",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
+  },
+  "version": "0.1.0"
 }

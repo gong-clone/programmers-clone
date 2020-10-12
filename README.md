@@ -1,44 +1,43 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+<h1 align="center">
+	<img src="public/favicon.png" alt="logo" width="150" align="center">
+    <br>
+    <br>
+    프로그래머스 클론
+</h1>
 
-## Available Scripts
+<p align="center">
+  <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/gong-clone/programmers-clone/CI">
+  <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/gong-clone/programmers-clone">
+  <img alt="Top langauage" src="https://img.shields.io/github/languages/top/gong-clone/programmers-clone">
+  <a href="https://github.com/gong-clone/programmers-clone/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/gong-clone/programmers-clone" /></a>
+</p>
 
-In the project directory, you can run:
+<h4 align="center">프로그래머스 웹사이트 클론 프로젝트</h4>
 
-### `yarn start`
+**<p align="center">[웹사이트](https://gong-clone.github.io/programmers-clone/) | [스토리북](https://master--5f59b6cd9278a000223b070f.chromatic.com) | [이슈 등록](https://github.com/gong-clone/programmers-clone/issues/new) | [문서모음](https://www.notion.so/rightpair/cabfb05fe10e4ff0ac4039caa6ab7b38)</p>**
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<p align="center">
+	<img src="https://firebasestorage.googleapis.com/v0/b/programmers-clone.appspot.com/o/readme_screenshot.png?alt=media&token=1124e958-2df9-4719-a9cd-03051aa9dbe3" alt="website" width="1200" align="center">
+</p>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## 특징
 
-### `yarn test`
+- [프로그래머스 사이트](https://programmers.co.kr/)의 메인화면 클론
+- 스토리북으로 컴포넌트 관리(Storybook Driven Development)
+- Firebase Storage에 이미지 저장
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 기술스택
 
-### `yarn build`
+- [React](https://ko.reactjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Emotion](https://emotion.sh/docs/introduction)
+- [Storybook](https://storybook.js.org/)
+- 기타 : [package.json](https://github.com/gong-clone/programmers-clone/blob/master/package.json) 참조
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 라이선스
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+[MIT](https://github.com/gong-clone/programmers-clone/blob/master/LICENSE)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+> GitHub [@tkddn204](https://github.com/tkddn204) [@HyeanWoo](https://github.com/HyeanWoo) [@yg1110](https://github.com/yg1110)
